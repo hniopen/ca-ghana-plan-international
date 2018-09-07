@@ -1,0 +1,61 @@
+## local
+/*.DS_Store
+
+### Custom
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+
+/.vagrant
+Homestead.json
+Homestead.yaml
+npm-debug.log
+.env
+
+
+### JetBrains template:
+## .idea
+/.idea
+
+## File-based project format:
+*.iws
+
+## Plugin-specific files:
+
+# IntelliJ
+/out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+## Dynamic generated files
+*dynamic_menu*
+*dynamic_web*
+*dynamic_api*
+*DwSubmission*
+*dw_submission*
+    ###### Apart from :
+    # > reg = Datasender
+!*DwSubmissionreg*
+!*DwSubmissionValuereg*
+!*dw_submissionreg*
+!*dw_submission_valuereg*
+     # > model_schemas : stubs for generator
+!/resources/model_schemas/DwSubmission*
+!/database/seeds/Dw*
+## Packages
+/packages/*
+/public/xml*
+public/bower_components
+storage

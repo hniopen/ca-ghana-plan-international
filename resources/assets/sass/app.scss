@@ -1,0 +1,117 @@
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+.centered-title {
+  width: 100%;
+  text-align: center;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.visual-description {
+  font-style: italic;
+}
+
+form.fix-margin {
+  margin-bottom: .5em;
+  margin-top: .5em;
+}
+
+.panel-indicator {
+  height: 486px;
+}
+
+.left-logo-adjust {
+ padding: 0px 15px 0px 0px;
+ margin-left: -15px;
+}
+
+.fix-height {
+  height: 50px;
+}
+
+//override bootstrap media query removing navbar-right
+
+.navbar-right {
+  float: right !important;
+  margin: 0px -15px 0px 0px;
+}
+
+.navbar-nav > li > a {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+//
+
+@media (max-width: $screen-sm-min) {
+  .dropdown-text {
+    font-size: 11px;
+  }
+  .centered-title {
+    display: none;
+  }
+  .navbar-nav .open .dropdown-menu {
+      position: absolute;
+      float: none;
+      width: auto;
+      margin-top: 0;
+      background-color: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  }
+}
+.form-group-right {
+  padding-left: 5px;
+}
+.right-logo-adjust {
+  margin: 10px 0px 10px 0px;
+}
+.left-dropdown {
+  float: left;
+}
+.fix-navbar {
+  height: 51px; border-radius: 4px;
+}
+.c3-target-Boys,
+.c3-target-Girls {
+  display: none;
+}
+
+.custom-no-data-message {
+    fill: grey;
+    font-size: 1.5em;
+}
+path[class*="c3-line-Target"] {
+  stroke-dasharray: 5,5;
+}
+
+.btn-default:active:focus, .btn-default:focus { 
+    color: #636b6f;
+    background-color: #fff;
+    border-color: #ccc;
+    outline: none;
+}
+.btn-default:hover, .btn-default:hover:active:focus, .btn-default:hover:focus, .btn-default:hover:active {
+  color: #636b6f;
+  background-color: #e6e5e5;
+  border-color: #adadad;
+  text-decoration: none;
+}
+.btn-primary:hover, .btn-primary:hover:active:focus, .btn-primary:hover:focus, .btn-primary:hover:active {
+  color: #fff;
+  background-color: #2579a9;
+  border-color: #1f648b;
+  text-decoration: none;
+}
+.btn-primary:active:focus, .btn-primary:focus { 
+    color: #fff;
+    background-color: #3097D1;
+    border-color: #2a88bd;
+    outline: none;
+}

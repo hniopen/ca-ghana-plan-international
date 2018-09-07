@@ -1,0 +1,73 @@
+{
+    "name": "laravel/laravel",
+    "description": "The Laravel Framework.",
+    "keywords": ["framework", "laravel"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=5.6.4",
+        "barryvdh/laravel-debugbar": "~2.4",
+        "doctrine/dbal": "^2.5",
+        "infyomlabs/adminlte-templates": "5.4.x-dev",
+        "infyomlabs/generator-builder": "dev-master",
+        "infyomlabs/laravel-generator": "5.4.x-dev",
+        "intervention/image": "^2.3",
+        "laravel/framework": "5.4.*",
+        "laravel/tinker": "~1.0",
+        "laravelcollective/html": "^5.4.0",
+        "maatwebsite/excel": "~2.1.0",
+        "nesbot/carbon": "^1.24",
+        "orangehill/iseed": "dev-master",
+        "spatie/laravel-permission": "^2.2",
+        "yajra/laravel-datatables-buttons": "2.*",
+        "yajra/laravel-datatables-oracle": "7.*"
+    },
+    "require-dev": {
+        "fzaninotto/faker": "~1.4",
+        "mockery/mockery": "0.9.*",
+        "phpunit/phpunit": "~5.7"
+    },
+    "autoload": {
+        "classmap": [
+            "database"
+        ],
+        "psr-4": {
+            "App\\": "app/",
+            "Hni\\Tuto\\": "packages/hni/tuto/src",
+            "Hni\\Dwsync\\": "packages/hni/dwsync/src"
+        },
+        "files": [
+            "app/helpers/main_helpers.php",
+            "app/helpers/file_helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+            "php install.php"
+        ],
+        "post-create-project-cmd": [
+            "php artisan key:generate"
+        ],
+        "post-install-cmd": [
+            "php install.php",
+            "Illuminate\\Foundation\\ComposerScripts::postInstall",
+            "php artisan optimize"
+        ],
+        "post-update-cmd": [
+            "php install.php",
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "php artisan optimize"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    }
+}
