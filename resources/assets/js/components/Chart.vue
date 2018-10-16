@@ -216,7 +216,7 @@
           if(moment(dataDate, "YYYYMM").isSame(moment(this.dateFilterStart, "MMM-YYYY"))) {
             chartDataSlice[0] = i+1;
           }
-          if(moment(dataDate, "YYYYMM").isSame(moment(this.dateFilterEnd, "MMM-YYYY"))) {
+          if(moment(dataDate, "YYYYMM").isSameOrBefore(moment(this.dateFilterEnd, "MMM-YYYY"))) {
             chartDataSlice[1] = i+2;
           }
         });
