@@ -6,7 +6,7 @@ trait DwSubmissionZipArraysTrait {
 	//relies on array sorted by date which the query should guarantee
 	private static function zipArrays($arr1, $arr2, $countKeys) {
 		$comparisonMonth = function($month) {
-			return $month < 9 ? "0".$month : $month;
+			return $month < 10 ? "0".$month : $month;
 		};
 		$longestArray = $arr1 > $arr2 ? $arr1 : $arr2;
 		$shortestArray = $arr1 > $arr2 ? $arr2 : $arr1;

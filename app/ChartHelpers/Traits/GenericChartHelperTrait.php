@@ -5,7 +5,7 @@ namespace App\ChartHelpers\Traits;
 trait GenericChartHelperTrait {
 	private function convertToPercentageTimeseries($zippedArrays) {
 		$comparisonMonth = function($month) {
-			return $month < 9 ? "0".$month : $month;
+			return $month < 10 ? "0".$month : $month;
 		};
 		return array_map(function($month) use ($comparisonMonth) {
 			if(isset($month[$this->zipKeys[0]]) && $month[$this->zipKeys[0]] > 0 && isset($month[$this->zipKeys[1]]) && $month[$this->zipKeys[1]] > 0) {
@@ -21,7 +21,7 @@ trait GenericChartHelperTrait {
 	}
 	private function convertToNumericTimeseries($zippedArrays) {
 		$comparisonMonth = function($month) {
-			return $month < 9 ? "0".$month : $month;
+			return $month < 10 ? "0".$month : $month;
 		};
 		return array_map(function($month) use ($comparisonMonth) {
 			if(isset($month[$this->zipKeys[1]]) && $month[$this->zipKeys[1]] > 0) {
